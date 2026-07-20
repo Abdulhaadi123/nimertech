@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, MapPin, Mail, Clock } from "lucide-react";
+import { Send, CheckCircle, MapPin, Mail } from "lucide-react";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "info@nimertech.com", href: "mailto:info@nimertech.com" },
-  { icon: MapPin, label: "HQ", value: "New Jersey, United States", href: "#" },
-  { icon: Clock, label: "Response Time", value: "Within 24 hours, guaranteed", href: "#" },
+  { icon: MapPin, label: "Location", value: "United States, NJ", href: "#" },
 ];
 
 export default function ContactPage() {
@@ -58,29 +57,15 @@ export default function ContactPage() {
                     <option value="software">Custom Software Development</option>
                     <option value="mobile">Mobile App Development</option>
                     <option value="staff">IT Staff Augmentation</option>
-                    <option value="cloud">Cloud & DevOps</option>
-                    <option value="consulting">Technology Consulting</option>
-                    <option value="other">Other</option>
                   </select>
                 </div>
               </div>
               <div>
-                <label className="text-sm text-[var(--text-secondary)] mb-1.5 block">Budget Range</label>
-                <select className="w-full px-4 py-3 rounded-xl bg-white/5 border border-[var(--card-border)] text-[var(--text-secondary)] focus:outline-none focus:border-[var(--primary)]/50 focus:ring-1 focus:ring-[var(--primary)]/30 transition-all text-sm appearance-none">
-                  <option value="">Select budget range</option>
-                  <option value="10k-25k">$10K – $25K</option>
-                  <option value="25k-50k">$25K – $50K</option>
-                  <option value="50k-100k">$50K – $100K</option>
-                  <option value="100k+">$100K+</option>
-                  <option value="unsure">Not sure yet</option>
-                </select>
-              </div>
-              <div>
                 <label className="text-sm text-[var(--text-secondary)] mb-1.5 block">Project Details *</label>
-                <textarea required rows={5} placeholder="Tell us about your project, timeline, goals, and any specific requirements..." className="w-full px-4 py-3 rounded-xl bg-white/5 border border-[var(--card-border)] text-white placeholder-[var(--text-secondary)]/50 focus:outline-none focus:border-[var(--primary)]/50 focus:ring-1 focus:ring-[var(--primary)]/30 transition-all text-sm resize-none" />
+                <textarea required rows={5} placeholder="Describe your project, timeline, and goals..." className="w-full px-4 py-3 rounded-xl bg-white/5 border border-[var(--card-border)] text-white placeholder-[var(--text-secondary)]/50 focus:outline-none focus:border-[var(--primary)]/50 focus:ring-1 focus:ring-[var(--primary)]/30 transition-all text-sm resize-none" />
               </div>
-              <button type="submit" className="w-full py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:shadow-[0_0_24px_rgba(133,135,219,0.4)] transition-all duration-300 flex items-center justify-center gap-2">
-                {submitted ? <><CheckCircle className="w-4 h-4" /> Message Sent Successfully!</> : <><Send className="w-4 h-4" /> Send Message</>}
+              <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-[#0c0827] bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:shadow-[0_0_20px_rgba(130,124,224,0.3)] transition-all">
+                {submitted ? <><CheckCircle className="w-4 h-4" /> Message Sent Successfully!</> : <>Send Message <Send className="w-4 h-4" /></>}
               </button>
             </form>
           </div>
@@ -98,15 +83,6 @@ export default function ContactPage() {
               <h3 className="font-[family-name:var(--font-space-grotesk)] text-base font-bold text-white mb-2">Prefer a quick call?</h3>
               <p className="text-sm text-[var(--text-secondary)] mb-4">Book a free 30-minute consultation with our solutions architect to discuss your project requirements.</p>
               <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:text-white transition-colors">Book a Call →</a>
-            </div>
-
-            <div className="p-5 bg-[var(--card-bg)] rounded-xl border border-[var(--card-border)]">
-              <h3 className="font-[family-name:var(--font-space-grotesk)] text-sm font-bold text-white mb-3">Global Offices</h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <div><span className="text-white font-medium">San Francisco</span> — HQ & Client Services</div>
-                <div><span className="text-white font-medium">Lahore</span> — Engineering Center</div>
-                <div><span className="text-white font-medium">Dubai</span> — Middle East Operations</div>
-              </div>
             </div>
           </div>
         </div>

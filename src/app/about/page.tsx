@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Target, Heart, Globe, Award, MapPin, Activity, ShieldCheck, Database, Server, Users } from "lucide-react";
+import { ArrowRight, Target, Heart, Globe, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us — NimerTech",
@@ -164,62 +164,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Global Engineering Hubs (Interactive dashboard styling) */}
-        <div className="mb-24">
-          <div className="text-left mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-[var(--accent)] mb-3 block font-semibold">Global Scale</span>
-            <h2 className="font-[family-name:var(--font-space-grotesk)] text-2xl font-bold text-white tracking-tight">Global Engineering Hubs</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              { 
-                city: "San Francisco, CA", 
-                role: "HQ & Client Services", 
-                country: "United States", 
-                stats: { ping: "12ms", active: "15 Leads", servers: "AWS Cloud" }
-              },
-              { 
-                city: "Lahore, Pakistan", 
-                role: "Engineering Center", 
-                country: "Pakistan", 
-                stats: { ping: "142ms", active: "120 Developers", servers: "Dedicated Rack" }
-              },
-              { 
-                city: "Dubai, UAE", 
-                role: "Middle East Operations", 
-                country: "UAE", 
-                stats: { ping: "38ms", active: "10 Architects", servers: "Multi-Cloud" }
-              },
-            ].map((office) => (
-              <div key={office.city} className="p-6 bg-[#19123b]/40 rounded-3xl border border-white/[0.06] hover:border-white/20 transition-all duration-300 flex flex-col justify-between text-left relative overflow-hidden group">
-                <div className="absolute -right-8 -top-8 w-20 h-20 bg-[var(--primary)]/5 rounded-full blur-xl" />
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center mb-4 group-hover:border-white/20 transition-all">
-                    <MapPin className="w-4.5 h-4.5 text-[var(--accent)]" />
-                  </div>
-                  <h3 className="text-white font-bold text-base sm:text-lg">{office.city}</h3>
-                  <p className="text-xs text-[var(--text-secondary)] font-semibold mt-1">{office.role}</p>
-                </div>
 
-                {/* Sub-dashboard specs */}
-                <div className="mt-6 pt-4 border-t border-white/5 space-y-1.5 font-mono text-[9px] text-white/50">
-                  <div className="flex justify-between">
-                    <span className="flex items-center gap-1"><Activity className="w-3 h-3 text-[var(--accent)]" /> Network Ping</span>
-                    <span className="text-white font-semibold">{office.stats.ping}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="flex items-center gap-1"><Users className="w-3 h-3 text-[var(--accent)]" /> Staffing Capacity</span>
-                    <span className="text-white font-semibold">{office.stats.active}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="flex items-center gap-1"><Server className="w-3 h-3 text-[var(--accent)]" /> Hosting Node</span>
-                    <span className="text-white font-semibold">{office.stats.servers}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA */}
         <div className="text-center bg-gradient-to-br from-[var(--primary)]/10 to-[var(--accent)]/5 border border-white/[0.06] rounded-3xl p-8 sm:p-12 backdrop-blur-sm">
